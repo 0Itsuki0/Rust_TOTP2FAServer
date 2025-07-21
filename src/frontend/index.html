@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <script src="index.js">
+
+    </script>
+
+</head>
+
+<body>
+    <div id="formContainer" style="display: block;">
+        <br /><br />
+        <label>Email: </label>
+        <input type="text" value="email@example.com" id="email" name="email">
+        <br /> <br />
+        <label>Password: </label>
+        <input type="text" value="password" id="password" name="password">
+        <br /> <br />
+        <button type="button" onclick="register()">Register(POST /auth/register)</button>
+        <button type="button" onclick="signIn()">Sign In(POST /auth/signin)</button>
+    </div>
+
+
+
+    <div id="signedInContainer" style="display: none;">
+        <br /><br />
+        <p>User: </p>
+        <p id="signedInEmail"></p>
+
+        <br />
+        <p>OTP: </p>
+        <button type="button" onclick="enableOTP()" id="enableOTPButton" style="display: none;">Enable OTP(GET
+            /auth/otp/enable)</button>
+        <button type="button" onclick="disableOTP()" id="disableOTPButton" style="display: none;">Disable OTP(GET
+            /auth/otp/disable)</button>
+
+        <br />
+
+        <button type="button" onclick="SignOut()">Sign Out(GET
+            /auth/signout)</button>
+
+    </div>
+
+    <div id="otpTokenContainer" style="display: none">
+        <br /><br />
+        <!-- only display QrCode on enabling otp -->
+        <img src="" id="otpQRCode" style="display: none; width: 160px; height: 160px;" />
+
+        <label>OTP token from Authenticator: </label>
+        <input type="text" value="" id="otpToken" name="otpToken">
+        <br /> <br />
+        <button type="button" onclick="verifyOTPToken()">Verify(POST /auth/otp/verify)</button>
+    </div>
+
+    <br /><br /><br /><br />
+</body>
+
+</html>
