@@ -37,4 +37,4 @@ To test out the server as well as the frontends,
 
 
 For more details, please check out my blog:
-[Rust/Axum: TOTP-based Two Factor Authentication (2FA) Server]()
+[Rust/Axum: TOTP-based Two Factor Authentication (2FA) Server](https://medium.com/@itsuki.enjoy/rust-axum-totp-based-two-factor-authentication-2fa-server-bb5829f6c3a3)
